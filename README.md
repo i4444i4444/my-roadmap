@@ -1,28 +1,45 @@
 # My Roadmap
 
-A personal repository for tracking my development journey: study plan, notes, reusable code snippets, videos, and graph-based knowledge notes.
+A personal learning roadmap and knowledge base for tracking progress, organizing study materials, and building reusable programming resources.
 
-## What's inside
+## Contents
 
-| File / folder | Purpose |
+| File | Description |
 |---|---|
-| [roadmap.md](roadmap.md) | Main learning plan with checkboxes |
-| [algorithms.md](algorithms.md) | Notes from the book |
-| [snippets.md](snippets.md) | Common algorithms and code snippets |
-| [videos.md](videos.md) | Videos and courses to watch |
-| [scripts/](scripts/) | Python scripts for automation |
-| [.github/workflows/](.github/workflows/) | GitHub Actions workflows |
-| [STATS.md](STATS.md) | Automatically generated progress bar |
+| [roadmap.md](roadmap.md) | Main learning roadmap and study progress |
+| [algorithms.md](algorithms.md) | Notes on algorithms and learning materials |
+| [snippets.md](snippets.md) | Reusable algorithms and code snippets |
+| [videos.md](videos.md) | Video resources and learning checklist |
+| [video_stats.md](video_stats.md) | Video watching statistics and progress |
+
+
+## Learning Progress
+
+### Roadmap
+
+Use checkboxes in [roadmap.md](roadmap.md) to track completed learning tasks.
+
+### Videos
+
+The [videos.md](videos.md) file contains learning resources organized by topic. Mark a video as watched by changing `- [ ]` to `- [x]`.
+
+The [video statistics report](video_stats.md) summarizes completed videos, remaining videos, and progress by topic.
 
 ## Automation
 
-- [`scripts/stats.py`](scripts/stats.py) — counts completed tasks in `roadmap.md` and generates `STATS.md` with a progress bar.
-- GitHub Actions runs the statistics script on every push to `main` and commits the updated `STATS.md`.
+Scripts in the [`scripts/`](scripts/) directory automate routine tasks.
 
-## Note format
+- [`video_stats.py`](scripts/video_stats.py) — calculates video completion statistics and generates `VIDEO_STATS.md`.
+- [`fetch_video_titles.py`](scripts/fetch_video_titles.py) — retrieves YouTube video titles and channel names for supported entries in `videos.md`.
+- [`stats.py`](scripts/stats.py) — generates learning roadmap progress statistics.
 
-Notes are kept in [Obsidian](https://obsidian.md/) as a knowledge graph. Topics are connected via `[[wiki-links]]`. The repository serves as the vault, keeping the knowledge graph and Git history together.
+## Knowledge Management
 
-## About
+Study notes and resources are organized into Markdown files. The repository keeps learning materials, progress tracking, and reusable code in one place.
 
-Personal learning roadmap and knowledge base covering study planning, algorithms, reusable code snippets, videos, and automated progress tracking.
+## Workflow
+
+1. Add learning resources to the relevant Markdown file.
+2. Mark completed tasks and watched videos using checkboxes.
+3. Run the appropriate Python script to regenerate statistics.
+4. Commit and push changes to keep the repository up to date.
